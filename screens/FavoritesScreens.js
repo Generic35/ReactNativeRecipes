@@ -2,7 +2,11 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 const FavoritesScreen = props => {
-  return <View style={styles.screen}></View>;
+  return (
+    <View style={styles.screen}>
+      <Text>favorites screen</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({

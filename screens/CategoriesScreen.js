@@ -2,7 +2,11 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 const CategoriesScreen = props => {
-  return <View style={styles.screen}></View>;
+  return (
+    <View style={styles.screen}>
+      <Text>categories screen works</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
