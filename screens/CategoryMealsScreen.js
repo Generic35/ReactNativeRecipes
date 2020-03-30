@@ -2,6 +2,9 @@ import React from 'react';
 import { Button, StyleSheet, View, Text, Platform } from 'react-native';
 import { CATEGORIES } from '../data/dummy-data';
 import Colors from '../constants/Colors';
+import { enableScreens } from 'react-native-screens';
+
+enableScreens();
 
 const CategoryMealsScreen = props => {
   const catId = props.navigation.getParam('categoryId');
@@ -30,11 +33,7 @@ CategoryMealsScreen.navigationOptions = navigationData => {
   const catId = navigationData.navigation.getParam('categoryId');
   const category = CATEGORIES.find(item => (item.id = catId));
   return {
-    headerTitle: category.title,
-    headerStyle: {
-      backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
-    },
-    headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor
+    headerTitle: category.title
   };
 };
 const styles = StyleSheet.create({
